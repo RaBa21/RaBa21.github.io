@@ -16,7 +16,7 @@ var AVAILABLE = []
 
 function fetch_words() {
     var words = []
-    fetch("all.tsv")
+    fetch("magyar-szavak.txt")
     .then((res) => res.text())
     .then((text) => {
         text.split("\n").forEach(e => {
