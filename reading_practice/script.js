@@ -1,11 +1,11 @@
 var LIMIT_SILL = 1
-var LETTERS = "aáiímloóteé"
+var LETTERS = "aábcdeéfghiíjklmnoóöőprstuúüűvxyz"
 var CAP_MODE = 0 // 0:nincs, 1:eleje, 2:random
 
 function get_sylls(word) {
     sylls = 0
     for (let i = 0; i < word.length; i++) {
-        if ("AÁEÉIÍOÓÖŐUÚÜŰ".includes(word.charAt(i))) {
+        if ("AÁEÉIÍOÓÖŐUÚÜŰ".includes(word.toUpperCase().charAt(i))) {
             sylls++
         }
     }
@@ -21,7 +21,7 @@ function fetch_words() {
     .then((text) => {
         text.split("\n").forEach(e => {
             if (get_sylls(e) <= LIMIT_SILL) {
-                if (e.match(`^[${LETTERS.toUpperCase()}]+$`)) {
+                if (e.match(`^[${LETTERS.toLowerCase()}]+$`)) {
                     words.push(e)
                 }
             }
@@ -29,6 +29,7 @@ function fetch_words() {
         });
     })
     .catch((e) => console.error(e));
+    console.log(words)
     return words
 }
 
