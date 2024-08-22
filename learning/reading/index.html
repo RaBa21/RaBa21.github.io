@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olvasás</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="button home" onclick="window.location.href = '../home.html'">🏠</div>
+    <table class="settings">
+        <tr>
+            <td>Maximum szótagszám:</td>
+            <td><input type="number" id="max_syll" value="2" min="1"></td>
+        </tr>
+
+        <tr>
+            <td>Tanult betűk (kisbetű):</td>
+            <td><input id="letters" value="aábcdeéfghiíjklmnoóöőpqrstuúüűvwxyz"></td>
+        </tr>
+
+        <tr>
+            <td>Többjegyű betűk?</td>
+            <td><input type="checkbox" id="double_letters" checked></td>
+        </tr>
+
+        <tr>
+            <td>Nagybetű van:</td>
+            <td><input type="radio" name="capital" id="c1" checked> <label for="c1">Sehol</label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" name="capital" id="c2"> <label for="c2">A szó elején</label></td>
+        <tr>
+            <td></td>
+            <td><input type="radio" name="capital" id="c3"> <label for="c3">Bárhol a szóban</label></td>
+        </tr>
+    </table>
+    <br><br>
+    <table id="words">
+        <tr>
+            <td><label id="word"></label></td>
+
+            <td>
+                <div id="next" class="button" onclick="choose()">&nbsp;&nbsp;➝&nbsp;&nbsp;</div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

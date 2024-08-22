@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matek</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="button home" onclick="window.location.href = '../home.html'">🏠</div>
+    <table class="settings">
+        <tr>
+            <td>Minimum szám:</td>
+            <td><input type="number" id="min_val" value="0" max="1"></td>
+        </tr>
+        <tr>
+            <td>Maximum szám:</td>
+            <td><input type="number" id="max_val" value="10" min="2"></td>
+        </tr>
+
+        <!-- <tr>
+            <td>Tanult betűk (kisbetű):</td>
+            <td><input id="letters" value="aábcdeéfghiíjklmnoóöőpqrstuúüűvwxyz"></td>
+        </tr> -->
+
+        <tr>
+            <td>Tanult műveletek:</td>
+            <td><input type="checkbox" name="operator" id="o1" checked> <label for="o1">Összeadás (+)</label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" name="operator" id="o2"> <label for="o2">Kivonás (-)</label></td>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" name="operator" id="o3"> <label for="o3">Szorzás (<b>·</b>)</label></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="checkbox" name="operator" id="o4"> <label for="o4">Osztás (<b>:</b>)</label></td>
+        </tr>
+        <!--         <tr>
+            <td></td>
+            <td><input type="checkbox" name="operator" id="o5"> <label for="o5">Hatványozás (<i>x<sup>y</sup></i>)</label></td>
+        </tr> -->
+    </table>
+    <br><br>
+    <table id="problems">
+        <tr>
+            <td><label id="problem"></label><label id="correct"></label>
+                <input type="number" id="answer">
+            </td>
+
+            <td>
+                <div id="next" class="button" onclick="check_and_add_new()">Küldés<br>&nbsp;&nbsp;(Enter)&nbsp;&nbsp;
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>

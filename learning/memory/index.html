@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magolás</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="button home" onclick="window.location.href = '../home.html'">🏠</div>
+    <table class="settings">
+        <tr>
+            <td>Fájl:</td>
+            <td><input type="file" id="file" accept="text/plain"></td>
+        </tr>
+
+
+        <tr>
+            <td>
+                <div class="button"><br>&nbsp;&nbsp;Start&nbsp;&nbsp;<br>&nbsp;</div>
+            </td>
+            <td>
+                <label id="timer">00:00.00</label>
+                <br>
+                <label id="subtimer">00:00.00</label>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table id="problems">
+        <tr>
+            <td><label id="problem"></label><label id="correct"></label>
+                <input type="number" id="answer">
+            </td>
+
+            <td>
+                <div id="next" class="button" onclick="check_and_add_new()">Küldés<br>&nbsp;&nbsp;(Enter)&nbsp;&nbsp;
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
