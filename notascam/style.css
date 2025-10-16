@@ -1,9 +1,9 @@
 :root {
-    --forecolor: #04aa6d;
+    --forecolor: #cba544;
 }
 
 body {
-    background-color: black;
+    background-color: #0b0c07;
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
@@ -47,3 +47,29 @@ body {
     text-shadow: 3px 0 #000, -3px 0 #000, 0 3px #000, 0 -3px #000,
              2px 2px #000, -2px -2px #000, 2px -2px #000, -2px 2px #000;
   }
+
+  #priceplan{
+    background-color: #ddd;
+    width: 400px;
+    height: 500px;
+    color: black;
+    font-size: 30px;
+    padding-top: 40px;
+    border-radius: 10px;
+    border-color: var(--forecolor);
+    border-width: 9px;
+    border-style: solid;
+    box-shadow:  0px 0px 300px var(--forecolor) ;
+  }
+
+  #priceplan span#amount {
+    font-weight: bold;
+    color: white;
+    font-size: 90px;
+    text-shadow: 4px 0 #000, -4px 0 #000, 0 4px #000, 0 -4px #000,
+             3px 3px #000, -3px -3px #000, 3px -3px #000, -3px 3px #000;
+  }
+
+a {
+  color: var(--forecolor);
+}
