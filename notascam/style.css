@@ -70,6 +70,6 @@ body {
              3px 3px #000, -3px -3px #000, 3px -3px #000, -3px 3px #000;
   }
 
-a {
+a { 
   color: var(--forecolor);
 }
